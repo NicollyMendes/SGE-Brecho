@@ -49,7 +49,7 @@ def insert_venda(id_cliente, id_item, data_venda, quantidade_vendida):
 # Função para exibir todos os itens vendidos
 def get_itens_vendidos():
     conexao = connect()
-    resultado = conexao.execute("SELECT Vendas.id, Itens.nome, Clientes.nome, Clientes.sobrenome, Vendas.data_venda, Vendas.quantidade_vendida\
+    resultado = conexao.execute("SELECT Vendas.id, Itens.nome, Clientes.nome, Vendas.data_venda, Vendas.quantidade_vendida\
                                 FROM Itens\
                                 INNER JOIN Vendas ON Itens.id = Vendas.id_item\
                                 INNER JOIN Clientes ON Clientes.id = Vendas.id_cliente").fetchall() 
