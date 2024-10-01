@@ -13,18 +13,18 @@ from view import *
 hoje = date.today()
 
 # CORES
-co0 = "#2e2d2b" #Preta
-co1 = "#feffff" #Branca ------ padrão 
-co2 = "#4fa882" #Verde
-co3 = "#38576b" #Valor
-co4 = "#403d3d" #Letra
-co5 = "#e06636" # - profit
-co6 = "#E9A178"
-co7 = "#3fbfb9" #Verde
-co8 = "#263238" # + verde
-co9 = "#e9edf5" # + verde
-co10 = "#6e8faf"
-co11 = "#f2f4f2"
+co0 = "#0D1B2A"  # Cor 1
+co1 = "#E0E1DD"  # Cor 5 (Fundo neutro claro)
+co2 = "#4fa882"  # Manter (Verde)
+co3 = "#415A77"  # Cor 3 (Barra separadora)
+co4 = "#1B263B"  # Cor 2 (Fundo de botões e painéis laterais)
+co5 = "#e06636"  # Manter (Para lucro/profit)
+co6 = "#778DA9"  # Cor 4 (Cabeçalho)
+co7 = "#3fbfb9"  # Manter (Verde)
+co8 = "#263238"  # Manter (Escuro adicional)
+co9 = "#E0E1DD"  # Mesma da cor 5 (Fundo claro)
+co10 = "#6e8faf" # Manter
+co11 = "#f2f4f2" # Manter
 
 #Criando janela  ------
 janela = Tk()
