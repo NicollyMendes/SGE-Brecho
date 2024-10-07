@@ -5,8 +5,8 @@ conexao = sqlite3.connect('dados_brecho.db')
 
 # Criar tabela de Itens 
 conexao.execute('CREATE TABLE Itens(\
-                id INTEGER PRIMARY KEY,\
-                nome TEXT,\
+                id INTEGER PRIMARY KEY AUTOINCREMENT,\
+                nome TEXT NOT NULL,\
                 descricao TEXT,\
                 tamanho TEXT,\
                 cor TEXT,\
@@ -14,17 +14,23 @@ conexao.execute('CREATE TABLE Itens(\
                 quantidade_em_estoque INTEGER)') 
 
 # Criar tabela de Clientes 
-conexao.execute('CREATE TABLE Clientes(\
-                id INTEGER PRIMARY KEY,\
-                nome TEXT,\
-                sobrenome TEXT,\
-                endereco TEXT,\
-                email TEXT,\
-                num_telefone TEXT)')
+conexao.execute('''
+    CREATE TABLE IF NOT EXISTS Clientes(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL,
+        cpf TEXT NOT NULL UNIQUE,  -- CPF único e obrigatório
+        cep TEXT,
+        endereco TEXT,
+        complemento TEXT,
+        uf TEXT,
+        email TEXT,
+        num_telefone TEXT
+    )
+''')
 
 # Criar tabela de Vendas 
 conexao.execute('CREATE TABLE Vendas(\
-                id INTEGER PRIMARY KEY,\
+                id INTEGER PRIMARY KEY AUTOINCREMENT,\
                 id_item INTEGER,\
                 id_cliente INTEGER,\
                 data_venda TEXT,\
