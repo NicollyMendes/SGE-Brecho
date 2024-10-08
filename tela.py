@@ -29,7 +29,7 @@ co11 = "#f2f4f2" # Manter
 # Criando janela  ------
 janela = Tk()
 janela.title('Sistema Responsivo de Gerenciamento de Estoque')
-janela.geometry('900x500')  # Tamanho inicial maior para testar a responsividade
+janela.geometry('770x330')  # Tamanho inicial maior para testar a responsividade
 janela.configure(background=co1)
 janela.resizable(True, True)  # Permitir redimensionamento
 
@@ -534,7 +534,7 @@ def ver_vendas():
     frameDir.grid_rowconfigure(2, weight=1)
 
     # Definindo as larguras e cabeçalhos das colunas
-    hd = ["nw", "nw", "nw", "nw", "nw", "ne"]
+    hd = ["nw", "nw", "nw", "nw", "nw", "nw"]
     h = [50, 150, 150, 100, 100, 120]
     n = 0
 
