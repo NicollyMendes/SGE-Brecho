@@ -15,7 +15,7 @@ conexao.execute('CREATE TABLE Itens(\
 
 # Criar tabela de Clientes 
 conexao.execute('''
-    CREATE TABLE IF NOT EXISTS Clientes(
+    CREATE TABLE Clientes(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
         cpf TEXT NOT NULL UNIQUE,  -- CPF único e obrigatório
