@@ -1,3 +1,7 @@
+#Descrição: Sistema de Gerenciamento de Estoque de um Brécho.
+#Data de criação: 20/09/2024
+#Autor: Nicolly Mendes
+
 from tkinter.ttk import *
 from tkinter import *
 from tkinter import Tk, ttk
