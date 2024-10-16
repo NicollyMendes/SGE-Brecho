@@ -213,7 +213,8 @@ def novo_cliente():
     img_salvar = Image.open('salvaricon.png')
     img_salvar = img_salvar.resize((18, 18))
     img_salvar = ImageTk.PhotoImage(img_salvar)
-    b_salvar = Button(frameDir, command=add, image=img_salvar, compound=LEFT, anchor=NW, text=' Salvar', bg=co1, fg=co4, font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
+    b_salvar = Button(frameDir, command=add, image=img_salvar, compound=LEFT, anchor=NW, text=' Salvar', bg=co1, \
+                      fg=co4, font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
     b_salvar.grid(row=9, column=1, pady=5, sticky=NSEW)
 
 
