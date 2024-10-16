@@ -468,7 +468,8 @@ def realizar_venda():
     img_salvar = Image.open('salvaricon.png')
     img_salvar = img_salvar.resize((18, 18))
     img_salvar = ImageTk.PhotoImage(img_salvar)
-    b_salvar = Button(frameDir, command=add, image=img_salvar, compound=LEFT, anchor=NW, text=' Salvar', bg=co1, fg=co4, font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
+    b_salvar = Button(frameDir, command=add, image=img_salvar, compound=LEFT, anchor=NW, text=' Salvar', bg=co1, fg=co4, \
+                      font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
     b_salvar.grid(row=4, column=1, pady=5, sticky=NSEW)
 
     preencher_comboboxes(combo_cliente, combo_item)
@@ -595,7 +596,8 @@ def control(i):
 img_cliente = Image.open('addiconPI.png')
 img_cliente = img_cliente.resize((18, 18))
 img_cliente = ImageTk.PhotoImage(img_cliente)
-b_novo_cliente = Button(frameEsq, command=lambda:control('novo_cliente'), image=img_cliente, compound=LEFT, anchor=NW, text=' Novo cliente', bg=co4, fg=co1,
+b_novo_cliente = Button(frameEsq, command=lambda:control('novo_cliente'), image=img_cliente, compound=LEFT, \
+                        anchor=NW, text=' Novo cliente', bg=co4, fg=co1,
                         font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
 b_novo_cliente.grid(row=0, column=0, sticky=NSEW, padx=5, pady=6)
 
@@ -603,7 +605,8 @@ b_novo_cliente.grid(row=0, column=0, sticky=NSEW, padx=5, pady=6)
 img_novo_item = Image.open('addiconPI.png')
 img_novo_item = img_novo_item.resize((18, 18))
 img_novo_item = ImageTk.PhotoImage(img_novo_item)
-b_novo_item = Button(frameEsq, command=lambda:control('novo_item'), image=img_novo_item, compound=LEFT, anchor=NW, text=' Novo item', bg=co4, fg=co1,
+b_novo_item = Button(frameEsq, command=lambda:control('novo_item'), image=img_novo_item, compound=LEFT, \
+                     anchor=NW, text=' Novo item', bg=co4, fg=co1,
                      font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
 b_novo_item.grid(row=1, column=0, sticky=NSEW, padx=5, pady=6)
 
@@ -611,7 +614,8 @@ b_novo_item.grid(row=1, column=0, sticky=NSEW, padx=5, pady=6)
 img_ver_itens = Image.open('produtoiconPI.png')
 img_ver_itens = img_ver_itens.resize((18, 18))
 img_ver_itens = ImageTk.PhotoImage(img_ver_itens)
-b_ver_itens = Button(frameEsq, command=lambda:control('ver_itens'), image=img_ver_itens, compound=LEFT, anchor=NW, text=' Exibir todos os itens', bg=co4, fg=co1,
+b_ver_itens = Button(frameEsq, command=lambda:control('ver_itens'), image=img_ver_itens, compound=LEFT, \
+                     anchor=NW, text=' Exibir todos os itens', bg=co4, fg=co1,
                      font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
 b_ver_itens.grid(row=2, column=0, sticky=NSEW, padx=5, pady=6)
 
@@ -619,7 +623,8 @@ b_ver_itens.grid(row=2, column=0, sticky=NSEW, padx=5, pady=6)
 img_ver_clientes = Image.open('usericonPI.png')
 img_ver_clientes = img_ver_clientes.resize((18, 18))
 img_ver_clientes = ImageTk.PhotoImage(img_ver_clientes)
-b_ver_clientes = Button(frameEsq, command=lambda:control('ver_clientes'), image=img_ver_clientes, compound=LEFT, anchor=NW, text=' Ver clientes', bg=co4, fg=co1,
+b_ver_clientes = Button(frameEsq, command=lambda:control('ver_clientes'), image=img_ver_clientes, \
+                        compound=LEFT, anchor=NW, text=' Ver clientes', bg=co4, fg=co1,
                         font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
 b_ver_clientes.grid(row=3, column=0, sticky=NSEW, padx=5, pady=6)
 
@@ -627,7 +632,8 @@ b_ver_clientes.grid(row=3, column=0, sticky=NSEW, padx=5, pady=6)
 img_realizar_venda = Image.open('vendaiconPI.png')
 img_realizar_venda = img_realizar_venda.resize((18, 18))
 img_realizar_venda = ImageTk.PhotoImage(img_realizar_venda)
-b_realizar_venda = Button(frameEsq, command=lambda:control('realizar_venda'), image=img_realizar_venda, compound=LEFT, anchor=NW, text=' Realizar uma venda', bg=co4, fg=co1,
+b_realizar_venda = Button(frameEsq, command=lambda:control('realizar_venda'), image=img_realizar_venda,\
+                          compound=LEFT, anchor=NW, text=' Realizar uma venda', bg=co4, fg=co1,
                           font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
 b_realizar_venda.grid(row=4, column=0, sticky=NSEW, padx=5, pady=6)
 
@@ -635,7 +641,8 @@ b_realizar_venda.grid(row=4, column=0, sticky=NSEW, padx=5, pady=6)
 img_ver_venda = Image.open('carrinhoiconPI.png')
 img_ver_venda = img_ver_venda.resize((18, 18))
 img_ver_venda = ImageTk.PhotoImage(img_ver_venda)
-b_ver_vendas = Button(frameEsq, command=lambda:control('ver_vendas'), image=img_ver_venda, compound=LEFT, anchor=NW, text=' Vendas realizadas', bg=co4, fg=co1,
+b_ver_vendas = Button(frameEsq, command=lambda:control('ver_vendas'), image=img_ver_venda, \
+                      compound=LEFT, anchor=NW, text=' Vendas realizadas', bg=co4, fg=co1,
                       font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
 b_ver_vendas.grid(row=5, column=0, sticky=NSEW, padx=5, pady=6)
 
