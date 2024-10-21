@@ -553,11 +553,26 @@ def ver_vendas():
     # Inserindo os dados das vendas na Treeview
     for item in lista_vendas:
         tree.insert('', 'end', values=item)
+        
+# Função para criar o backup do banco de dados
+def realizar_backup():
+    # Define o diretório de backup
+    diretorio_backup = 'backups'
 
+    # Verifica se o diretório de backup exite, caso contrário, cria-o
+    if not os.path.exists(diretorio_backup):
+        os.makedirs(diretorio_backup)
 
+    # Nome do arquivo orignal do banco de dados
+    arquivo_origem = 'dados/dados_brecho.db'
 
-
-
+    # Nome do arquivo de backup com data e hora
+    data_atual = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    arquivo_backup = f'{diretorio_backup}/backup_{data_atual}.db'
+    # Realiza a cópia do arquivo de origem para o diretorio de backuo
+    shutil.copy2(arquivo_origem, arquivo_backup)
+    print(f'Backup realizado com sucesso : {arquivo_backup}')
+    
 # Função para controlar o Menu ------
 def control(i):
     if i == 'novo_cliente':
@@ -646,6 +661,8 @@ b_ver_vendas = Button(frameEsq, command=lambda:control('ver_vendas'), image=img_
                       font=('Ivy 11'), overrelief=RIDGE, relief=GROOVE)
 b_ver_vendas.grid(row=5, column=0, sticky=NSEW, padx=5, pady=6)
 
+# Realizar backup ao nciar o programa
+realizar_backup()
 
 # Loop principal da interface gráfica
 janela.mainloop()
