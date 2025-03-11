@@ -1,6 +1,6 @@
 import sqlite3
 
-# Conectar ao banco de dados ou criar um novo banco de dados
+
 conexao = sqlite3.connect('dados_brecho.db')
 
 # Criar tabela de Itens 
