@@ -1,6 +1,6 @@
 import sqlite3
 
-# Conectar ao banco de dados
+
 # Função criada para conexão ao banco
 def connect():
     conexao = sqlite3.connect('dados_brecho.db')
@@ -27,6 +27,7 @@ def insert_cliente(nome, cpf, cep, endereco, complemento, uf, email, num_telefon
 
     conexao.commit()
     conexao.close()
+    
 # Função para exibir os clientes
 def get_clientes():
     conexao = connect()
@@ -56,8 +57,6 @@ def insert_venda(id_cliente, id_item, data_venda, quantidade_vendida):
 
     conexao.commit()
     conexao.close()
-
-
 
 # Função para buscar as vendas realizadas
 def get_itens_vendidos():
@@ -98,10 +97,10 @@ def preencher_comboboxes(combo_cliente, combo_item):
     itens = get_itens()        # Esta função deve retornar algo como [(1, "Camiseta", "Descrição", "Tamanho", ...)]
 
     # Preencher a combobox de clientes
-    clientes_formatados = [f"{cliente[0]} - {cliente[1]}" for cliente in clientes]  # Ex: "1 - João Silva"
+    clientes_formatados = [f"{cliente[0]} - {cliente[1]}" for cliente in clientes]  #Ex: "1 - João Silva"
     combo_cliente['values'] = clientes_formatados
 
     # Preencher a combobox de itens
-    itens_formatados = [f"{item[0]} - {item[1]}" for item in itens]  # Ex: "1 - Camiseta Branca"
+    itens_formatados = [f"{item[0]} - {item[1]}" for item in itens]  # Ex:"1 - Camiseta Branca"
     combo_item['values'] = itens_formatados
 
