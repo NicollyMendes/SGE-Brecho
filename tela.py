@@ -68,7 +68,7 @@ frameDir.grid_columnconfigure(0, weight=1)
 frameDir.grid_columnconfigure(1, weight=3)  # Adiciona peso para expandir melhor as caixas de texto
 
 # Logo ----------
-app_img = Image.open('shopiconPI.png')  # Substitua pelo caminho correto da imagem
+app_img = Image.open('shopiconPI.png') 
 app_img = app_img.resize((40, 40))
 app_img = ImageTk.PhotoImage(app_img)
 
@@ -82,7 +82,7 @@ app_.grid(row=0, column=1, sticky="nsew")
 app_linha = Label(frameCima, height=1, padx=5, anchor=NW, font=('Verdana 1 '), bg=co3, fg=co1)
 app_linha.grid(row=1, column=0, columnspan=2, sticky="nsew")
 
-# Função para validar CPF (mantida como estava)
+# Função para validar CPF
 def validar_cpf(cpf):
     cpf = re.sub(r'[^0-9]', '', cpf)  # Remove todos os caracteres não numéricos
     if len(cpf) != 11:
@@ -100,7 +100,6 @@ def validar_cpf(cpf):
 
     return cpf[-2:] == f"{digito_1}{digito_2}"
 
-# Função para cadastro de novo cliente
 # Função para cadastro de novo cliente com layout responsivo
 def novo_cliente():
     global img_salvar
@@ -256,7 +255,7 @@ def ver_clientes():
 
     for item in dados:
         tree.insert('', 'end', values=item)
-# Função para cadastro de novo item 
+
 # Função para cadastrar um novo item com layout responsivo
 def novo_item():
     global img_salvar
@@ -368,7 +367,7 @@ def novo_item():
     b_salvar.grid(row=8, column=1, pady=5, sticky=NSEW)
 
 
-# Ver itens cadastrados
+
 # Função para exibir os itens cadastrados com layout responsivo
 def ver_itens():
     for widget in frameDir.winfo_children():
@@ -406,7 +405,7 @@ def ver_itens():
         tree.insert('', 'end', values=item)
 
 
-# Realizar venda
+
 # Função para realizar uma venda com layout responsivo
 def realizar_venda():
     global img_salvar
@@ -475,7 +474,7 @@ def realizar_venda():
     preencher_comboboxes(combo_cliente, combo_item)
 
 
-# Ver vendas
+
 # Função para exibir as vendas realizadas com o valor total gasto
 def ver_vendas():
     # Limpa o frame
@@ -503,7 +502,7 @@ def ver_vendas():
     for venda in vendas:
         id_venda = venda[0]
         nome_item = venda[1]
-        nome_cliente = venda[2]  # Nome do cliente
+        nome_cliente = venda[2] 
         data_venda = venda[3]
         quantidade_vendida = venda[4]
         preco_item = venda[5]
