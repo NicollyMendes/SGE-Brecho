@@ -49,7 +49,7 @@ A interface principal contém uma barra de navegação lateral com as principais
 6. **Visualizar Vendas**: Exibe o histórico de todas as vendas realizadas.
 
 # Backup Semanal
-O sistrema realiza automaticamente um backup semanal do banco de dados para garantir a integridade e segurança dos dados. A cópia do banco de dados é armazenada na pasta backup, no diretório do projeto.
+O sistema realiza automaticamente um backup semanal do banco de dados para garantir a integridade e segurança dos dados. A cópia do banco de dados é armazenada na pasta backup, no diretório do projeto.
 
 ## Licença
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
